@@ -1,0 +1,37 @@
+#genres_menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    width: 180px; 
+}
+
+#genres_menu li {
+    border-bottom: 1px solid #397d53;
+    transition: background-color 0.3s ease;
+}
+
+#genres_menu li:last-child {
+    border-bottom: none;
+}
+
+#genres_menu li button {
+    display: flex;
+    width: 100%;
+    font-style: italic;
+    color: white; 
+    padding: 12px; 
+    text-align: center;
+    border: 1px solid #4CAF50;
+    border-radius: 8px; 
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    background-color: #4CAF50;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#genres_menu li button:active {
+    background-color: #397d53;
+}

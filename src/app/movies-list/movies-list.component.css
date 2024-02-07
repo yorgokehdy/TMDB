@@ -1,0 +1,130 @@
+a
+{
+  text-decoration: none;
+}
+
+#films
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+
+.movie
+{
+  transition: 0.3s;
+  width: 45%;
+  max-width: 300px; 
+  margin: 5px;
+  border-radius: 8px; 
+  overflow: visible;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.movie-info
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.favorite-button
+{
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.favorited
+{
+  color: rgb(78, 211, 52);
+}
+
+.overview
+{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 8px;
+  position: relative;
+}
+
+.movie:hover
+{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.1);
+}
+
+.title
+{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4e4949;
+}
+
+.film-poster
+{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fa
+{
+  padding:8px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover
+{
+  opacity: 0.8;
+}
+
+.fa:enabled
+{
+  color: #5cec3f;
+}
+
+.fa:disabled
+{
+  color: black;
+}
+
+.pagination-buttons
+{
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin-top: 20px;
+}
+
+.page-button
+{
+  background-color: #5cec3f;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 400px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.page-button:hover
+{
+  background-color: #3c942a;
+}

@@ -1,0 +1,6 @@
+<ul id="genres_menu">
+    <li *ngFor="let genre of genres | async">
+        <button [class.active]="genre.name === currentGenre" (click)="fetchMoviesByGenre(genre)">{{ genre.name }}</button>
+    </li>
+</ul>
+

@@ -1,0 +1,24 @@
+<div id="films">
+
+    <div *ngFor="let movie of $movies | async" class="movie">
+        <div class="movie-info">
+            <a [routerLink]="['/movie-details', movie.id]">
+                <div class="title">{{movie.title}}</div>
+            </a>
+            <button (click)="toggleFavorite(movie)" class="favorite-button" title="Toggle Favorite"
+                [ngClass]="{'favorited': isFavorite(movie)}">
+                <i class="fa fa-heart"></i>
+            </button>
+        </div>
+
+        <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" [alt]="movie.title + ' poster'"
+            class="film-poster" title="movie.title + ' poster'">
+
+        <div class="overview" data-max-words="20">{{movie.overview}}</div>
+    </div>
+</div>
+
+<div *ngIf="currentCategory !== 'favorite' && currentCategory !== 'popular' && currentCategory !== 'nowPlaying' && currentCategory !== 'topRated' && currentCategory !== 'upcoming'" class="pagination-buttons">
+    <button (click)="previousPage()" class="page-button"><< Previous Page</button>
+    <button (click)="nextPage()" class="page-button">Next Page >></button>
+</div>

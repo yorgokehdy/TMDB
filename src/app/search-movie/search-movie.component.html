@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <div class="movie-options">
+        <button [class.active]="currentCategory === 'popular'" (click)="showCategory('popular')">Popular</button>
+        <button [class.active]="currentCategory === 'nowPlaying'" (click)="showCategory('nowPlaying')">Now
+            Playing</button>
+        <button [class.active]="currentCategory === 'topRated'" (click)="showCategory('topRated')">Top Rated</button>
+        <button [class.active]="currentCategory === 'upcoming'" (click)="showCategory('upcoming')">Upcoming</button>
+        <button [class.active]="currentCategory === 'favorite'" (click)="showCategory('favorite')">Favorite</button>
+    </div>
+    <div class="search">
+        <input type="text" #search (keydown.enter)="performSearch(search.value)">
+        <button type="button" (click)="performSearch(search.value)" title="Perform Search">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+</nav>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

@@ -1,0 +1,26 @@
+<div class="movie-details-container">
+    <h1>{{ movieDetails.title }}</h1>
+    <div class="movie-header">
+        <img class="movie-poster" [src]="'https://image.tmdb.org/t/p/w500'+movieDetails.poster_path" alt="Movie Poster">
+        <div class="movie-info">
+            <p><strong>Release Date:</strong> {{ movieDetails.release_date }}</p>
+            <p><strong>Runtime:</strong> {{ movieDetails.runtime }} minutes</p>
+            <p><strong>Rating:</strong> {{ movieDetails.vote_average }}/10 from {{ movieDetails.vote_count }} votes</p>
+            <p><strong>Status:</strong> {{ movieDetails.status }}</p>
+            <p><strong>Language:</strong> {{ movieDetails.original_language }}</p>
+            <p><strong>Genres:</strong> <span *ngFor="let genre of movieDetails.genres">{{ genre.name }}, </span></p>
+        </div>
+        <div class="movie-cast">
+            <h2>Cast</h2>
+            <ul>
+                <li *ngFor="let castMember of movieCast">
+                    <strong>{{ castMember.character }}</strong> played by {{ castMember.name }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="movie-description">
+        <h2>Synopsis</h2>
+        <p>{{ movieDetails.overview }}</p>
+    </div>
+</div>
